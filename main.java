@@ -24,7 +24,7 @@ public static void Freq(String S)
 {
 	char String_Arr[] = new char[100];
 	char String_Uniq[] = new char[100];	
-	int str[] = new int[100];
+	int str_Counter[] = new int[100];
 	
 	for(int i=0;i<S.length();i++)
 		String_Arr[i] = S.charAt(i);
@@ -34,7 +34,7 @@ public static void Freq(String S)
 	for(i=0;i<S.length();i++) // HERE WE ARE FINDING THE UNIQUE CHARACTER IN THE STRING
 	{
 		IsUniq=false;
-		for(j=0;j<i;j++)
+		for(j=0;j<k;j++)
 		{
 			if(String_Uniq[j]==String_Arr[i])
 			{
@@ -50,7 +50,7 @@ public static void Freq(String S)
 	}
 	
 	for(i=0;i<k;i++)
-		str[i] = 0;
+		str_Counter[i] = 0;
 	
 	for(i=0;i<k;i++) // HERE WE ARE COUNTING
 	{	
@@ -58,7 +58,7 @@ public static void Freq(String S)
 		{
 			if(String_Uniq[i]==String_Arr[j])
 			{
-				str[i]+=1;
+				str_Counter[i]+=1;
 			}
 		}
 	}
