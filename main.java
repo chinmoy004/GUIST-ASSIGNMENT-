@@ -78,18 +78,18 @@ public static void Alter(String S)
 		String_Arr[i] = S.charAt(i);	
 		
 	int c;
-	for(int i=0;i<S.length();)
+	for(int i=0;i<S.length();i++)
 	{
-		if(String_Arr[i]>=97 && String_Arr[i]<=123)// CHECKING STRING CONTAINS ALPHABETS OR NOT. IF PRSENT THEN CAPITALSIE IT
+		if(String_Arr[i]>=97 && String_Arr[i]<=123 && i%2==0)// CHECKING STRING CONTAINS ALPHABETS OR NOT. IF PRSENT THEN CAPITALSIE IT
 		{
 			c =String_Arr[i];
 			String_Arr[i]= (char)(c-32);
 			i=i+2;
 		}
-		else //IF NOT MOVE ON
-		{
-			i++;
-		}
+		
+		
+			
+		
 	}
 	
 	for(int i=0;i<S.length();i++)
